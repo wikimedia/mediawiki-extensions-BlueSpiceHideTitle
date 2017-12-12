@@ -1,0 +1,13 @@
+{
+	"name": "mediawiki/blue-spice-hide-title",
+	"type": "mediawiki-extension",
+	"description": "Adds the magic word to hide the title of the page",
+	"license": "GPL-3.0",
+	"require": {
+		"composer/installers": "~1.0"
+	},
+	"autoload": {
+		"psr-4": {
+		}
+	}
+}
