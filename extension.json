@@ -26,7 +26,6 @@
 	"ResourceModules": {
 		"ext.bluespice.hidetitle.styles": {
 			"styles": "bluespice.hideTitle.css",
-			"position": "top",
 			"targets": [ "desktop", "mobile" ]
 		}
 	},
