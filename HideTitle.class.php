@@ -33,13 +33,11 @@ class HideTitle extends BsExtensionMW {
 	protected $bHideTitle = false;
 
 	protected function initExt() {
-		wfProfileIn( 'BS::'.__METHOD__ );
 		// Hooks
 		$this->setHook( 'BeforePageDisplay' );
 		$this->setHook( 'BSInsertMagicAjaxGetData', 'onBSInsertMagicAjaxGetData' );
 		$this->setHook( 'BSUsageTrackerRegisterCollectors' );
 		$this->mCore->registerBehaviorSwitch( 'bs_hidetitle' );
-		wfProfileOut( 'BS::'.__METHOD__ );
 	}
 
 	/**
