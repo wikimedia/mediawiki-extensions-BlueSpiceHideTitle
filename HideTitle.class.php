@@ -34,42 +34,10 @@ class HideTitle extends BsExtensionMW {
 
 	protected function initExt() {
 		// Hooks
-		$this->setHook( 'BeforePageDisplay' );
-		$this->setHook( 'BSInsertMagicAjaxGetData', 'onBSInsertMagicAjaxGetData' );
 		$this->setHook( 'BSUsageTrackerRegisterCollectors' );
-		$this->mCore->registerBehaviorSwitch( 'bs_hidetitle' );
-	}
 
-	/**
-	 *
-	 * @param OutputPage $oOutputPage
-	 * @param SkinTemplate $oSkinTemplate
-	 * @return boolean
-	 */
-	public function onBeforePageDisplay(  $oOutputPage, $oSkinTemplate ) {
-		$oTitle = $oOutputPage->getTitle();
-		$sHideTitlePageProp = BsArticleHelper::getInstance( $oTitle )->getPageProp( 'bs_hidetitle' );
-		if( $sHideTitlePageProp === '' ) {
-			$oOutputPage->mPagetitle = '';
-			$oOutputPage->addModuleStyles( 'ext.bluespice.hidetitle.styles' );
-		}
-
-		return true;
-	}
-
-	public function onBSInsertMagicAjaxGetData( $oResponse, $type ) {
-		if( $type !== 'switches' ) return true;
-
-		$oDescriptor = new stdClass();
-		$oDescriptor->id = 'bs:hidetitle';
-		$oDescriptor->type = 'switch';
-		$oDescriptor->name = 'HIDETITLE';
-		$oDescriptor->desc = wfMessage( 'bs-hidetitle-extension-description' )->plain();
-		$oDescriptor->code = '__HIDETITLE__';
-		$oDescriptor->previewable = false;
-		$oResponse->result[] = $oDescriptor;
-
-		return true;
+		$core = \BsCore::getInstance();
+		$core->registerBehaviorSwitch( 'bs_hidetitle' );
 	}
 
 	/**

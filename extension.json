@@ -3,14 +3,24 @@
 	"license-name": "GPL-3.0-only",
 	"version": "3.0.0-alpha",
 	"url": "https://help.bluespice.com/index.php/HideTitle",
-	"author": "Markus Glaser",
+	"author": [
+		"Markus Glaser",
+		"Peter Boehm"
+	],
 	"descriptionmsg": "bs-hidetitle-desc",
 	"type": "bluespice",
-	"bsgExtensions": {
-		"BlueSpiceHideTitle": {
-			"className": "HideTitle",
-			"extPath": "/BlueSpiceHideTitle"
+	"attributes": {
+		"BlueSpiceFoundation": {
+			"Extensions": {
+				"BlueSpiceHideTitle": {
+					"className": "HideTitle",
+					"extPath": "/BlueSpiceHideTitle"
+				}
+			}
 		}
+	},
+	"AutoloadNamespaces": {
+		"BlueSpice\\HideTitle\\": "src/"
 	},
 	"MessagesDirs": {
 		"BlueSpiceHideTitle": [
@@ -33,6 +43,10 @@
 		"localBasePath": "resources",
 		"remoteExtPath": "BlueSpiceHideTitle/resources"
 	},
+	"Hooks": {
+		"BSInsertMagicAjaxGetData": "\\BlueSpice\\HideTitle\\Hook\\BSInsertMagicAjaxGetData\\CheckHideTitle::callback",
+		"BeforePageDisplay": "\\BlueSpice\\HideTitle\\Hook\\BeforePageDisplay\\AddModules::callback"
+	},
 	"load_composer_autoloader": true,
-	"manifest_version": 1
+	"manifest_version": 2
 }
