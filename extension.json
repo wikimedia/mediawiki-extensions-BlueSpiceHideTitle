@@ -9,6 +9,9 @@
 	],
 	"descriptionmsg": "bs-hidetitle-desc",
 	"type": "bluespice",
+	"requires": {
+		"MediaWiki": ">= 1.31.0"
+	},
 	"attributes": {
 		"BlueSpiceFoundation": {
 			"Extensions": {
