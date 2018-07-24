@@ -10,7 +10,7 @@ class AddModules extends BeforePageDisplay {
 		$title = $this->out->getTitle();
 		$hideTitlePageProp = \BsArticleHelper::getInstance( $title )->getPageProp( 'bs_hidetitle' );
 		if ( $hideTitlePageProp === '' ) {
-			$this->out->mPagetitle = '';
+			$this->out->setPageTitle( '' );
 			$this->out->addModuleStyles( 'ext.bluespice.hidetitle.styles' );
 		}
 		return true;
