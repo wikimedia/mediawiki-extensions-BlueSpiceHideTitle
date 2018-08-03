@@ -35,9 +35,6 @@ class HideTitle extends BsExtensionMW {
 	protected function initExt() {
 		// Hooks
 		$this->setHook( 'BSUsageTrackerRegisterCollectors' );
-
-		$core = \BsCore::getInstance();
-		$core->registerBehaviorSwitch( 'bs_hidetitle' );
 	}
 
 	/**
