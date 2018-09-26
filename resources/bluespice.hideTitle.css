@@ -1,6 +1,7 @@
 
-#content h1.firstHeading,
 #firstHeading,
-.bs-page-breadcrumbs {
+#content h1.firstHeading,
+.bs-page-breadcrumbs,
+#content .bs-page-breadcrumbs {
 	display: none;
 }
