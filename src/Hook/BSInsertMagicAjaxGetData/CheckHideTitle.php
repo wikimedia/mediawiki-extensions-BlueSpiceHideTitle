@@ -19,7 +19,8 @@ class CheckHideTitle extends BSInsertMagicAjaxGetData {
 		$descriptor->desc = wfMessage( 'bs-countthings-tag-countarticles-desc' )->plain();
 		$descriptor->code = '__HIDETITLE__';
 		$descriptor->previewable = false;
-		$descriptor->helplink = 'https://help.bluespice.com/index.php/HideTitle';
+		$descriptor->helplink = $this->getServices()->getBSExtensionFactory()
+			->getExtension( 'BlueSpiceHideTitle' )->getUrl();
 		$this->response->result[] = $descriptor;
 
 		return true;
