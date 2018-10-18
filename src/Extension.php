@@ -27,15 +27,9 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU Public License v3
  * @filesource
  */
+namespace BlueSpice\HideTitle;
 
-class HideTitle extends BsExtensionMW {
-
-	protected $bHideTitle = false;
-
-	protected function initExt() {
-		// Hooks
-		$this->setHook( 'BSUsageTrackerRegisterCollectors' );
-	}
+class Extension extends \BlueSpice\Extension {
 
 	/**
 	 * Register tag with UsageTracker extension
