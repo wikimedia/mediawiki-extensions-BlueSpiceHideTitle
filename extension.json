@@ -10,13 +10,16 @@
 	"descriptionmsg": "bs-hidetitle-desc",
 	"type": "bluespice",
 	"requires": {
-		"MediaWiki": ">= 1.31.0"
+		"MediaWiki": ">= 1.31.0",
+		"extensions": {
+			"BlueSpiceFoundation": ">= 3.0.0"
+		}
 	},
 	"attributes": {
 		"BlueSpiceFoundation": {
 			"Extensions": {
 				"BlueSpiceHideTitle": {
-					"className": "HideTitle",
+					"className": "\\BlueSpice\\HideTitle\\Extension",
 					"extPath": "/BlueSpiceHideTitle"
 				}
 			}
@@ -33,9 +36,6 @@
 	"ExtensionMessagesFiles": {
 		"HideTitleMagic": "languages/HideTitle.i18n.magic.php"
 	},
-	"AutoloadClasses": {
-		"HideTitle": "HideTitle.class.php"
-	},
 	"ResourceModules": {
 		"ext.bluespice.hidetitle.styles": {
 			"styles": "bluespice.hideTitle.css",
@@ -49,7 +49,8 @@
 	"Hooks": {
 		"BSInsertMagicAjaxGetData": "\\BlueSpice\\HideTitle\\Hook\\BSInsertMagicAjaxGetData\\CheckHideTitle::callback",
 		"BeforePageDisplay": "\\BlueSpice\\HideTitle\\Hook\\BeforePageDisplay\\AddModules::callback",
-		"GetDoubleUnderscoreIDs": "\\BlueSpice\\HideTitle\\Hook\\GetDoubleUnderscoreIDs\\AddHideTitle::callback"
+		"GetDoubleUnderscoreIDs": "\\BlueSpice\\HideTitle\\Hook\\GetDoubleUnderscoreIDs\\AddHideTitle::callback",
+		"BSUsageTrackerRegisterCollectors": "\\BlueSpice\\HideTitle\\Extension::onBSUsageTrackerRegisterCollectors"
 	},
 	"load_composer_autoloader": true,
 	"manifest_version": 2
