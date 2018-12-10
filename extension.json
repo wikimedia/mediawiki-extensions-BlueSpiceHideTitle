@@ -38,8 +38,9 @@
 	},
 	"ResourceModules": {
 		"ext.bluespice.hidetitle.styles": {
-			"styles": "bluespice.hideTitle.css",
-			"targets": [ "desktop", "mobile" ]
+			"styles": [
+				"bluespice.hideTitle.css"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
