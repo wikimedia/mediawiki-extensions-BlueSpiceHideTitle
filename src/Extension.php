@@ -24,7 +24,7 @@
  * @author     Markus Glaser <glaser@hallowelt.com>
  * @package    BlueSpiceHideTitle
  * @copyright  Copyright (C) 2016 Hallo Welt! GmbH, All rights reserved.
- * @license    http://www.gnu.org/copyleft/gpl.html GNU Public License v3
+ * @license    http://www.gnu.org/copyleft/gpl.html GPL-3.0-only
  * @filesource
  */
 namespace BlueSpice\HideTitle;
@@ -33,15 +33,15 @@ class Extension extends \BlueSpice\Extension {
 
 	/**
 	 * Register tag with UsageTracker extension
-	 * @param array $aCollectorsConfig
+	 * @param array &$aCollectorsConfig
 	 * @return Always true to keep hook running
 	 */
 	public static function onBSUsageTrackerRegisterCollectors( &$aCollectorsConfig ) {
-		$aCollectorsConfig['bs:hidetitle'] = array(
+		$aCollectorsConfig['bs:hidetitle'] = [
 			'class' => 'Property',
-			'config' => array(
+			'config' => [
 				'identifier' => 'bs_hidetitle'
-			)
-		);
+			]
+		];
 	}
 }
