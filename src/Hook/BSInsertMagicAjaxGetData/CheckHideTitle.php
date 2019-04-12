@@ -11,7 +11,6 @@ class CheckHideTitle extends BSInsertMagicAjaxGetData {
 	}
 
 	protected function doProcess() {
-
 		$descriptor = new \stdClass();
 		$descriptor->id = 'bs:countarticles';
 		$descriptor->type = 'switch';
