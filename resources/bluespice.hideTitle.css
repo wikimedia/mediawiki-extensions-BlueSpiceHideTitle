@@ -4,6 +4,12 @@
 #content .bs-page-breadcrumbs,
 .bs-page-tools,
 #content .bs-page-tools,
-#contentSub {
+#contentSub,
+.bs-page-before-header,
+.bs-page-header,
+.bs-page-separator,
+.bs-firstHeading-container,
+.bs-page-after-header
+{
 	display: none;
 }
