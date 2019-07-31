@@ -23,6 +23,11 @@
 					"extPath": "/BlueSpiceHideTitle"
 				}
 			}
+		},
+		"BlueSpiceVisualEditorConnector": {
+			"PluginModules": [
+				"ext.bluespice.hideTitle.visualEditorPlugin"
+			]
 		}
 	},
 	"AutoloadNamespaces": {
@@ -40,6 +45,19 @@
 		"ext.bluespice.hidetitle.styles": {
 			"styles": [
 				"bluespice.hideTitle.css"
+			]
+		},
+		"ext.bluespice.hideTitle.visualEditorPlugin": {
+			"scripts": [
+				"bs.hidetitle/ui/plugin/MWMetaDialog.js",
+				"bs.hidetitle/dm/BSHideTitleMetaItem.js",
+				"bluespice.hideTitle.visualEditorPlugin.js"
+			],
+			"messages": [
+				"bs-hidetitle-ve-dialog-meta-settings-showtitle",
+				"bs-hidetitle-ve-dialog-meta-settings-hidetitle",
+				"bs-hidetitle-ve-dialog-meta-settings-hidetitle-label",
+				"bs-hidetitle-ve-dialog-meta-settings-hidetitle-help"
 			]
 		}
 	},
