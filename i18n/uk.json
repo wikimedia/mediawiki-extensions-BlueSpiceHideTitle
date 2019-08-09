@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ата"
+			"Ата",
+			"Vlad5250"
 		]
 	},
-	"bs-hidetitle-desc": "Додає магічне слово <code><nowiki>__HIDETITLE__</nowiki></code>, щоб приховати назву сторінки"
+	"bs-hidetitle-desc": "Додає магічне слово <code><nowiki>__HIDETITLE__</nowiki></code>, щоб приховати назву сторінки",
+	"bs-hidetitle-ve-dialog-meta-settings-showtitle": "Показати",
+	"bs-hidetitle-ve-dialog-meta-settings-hidetitle": "Приховати"
 }

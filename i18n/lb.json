@@ -4,5 +4,7 @@
 			"Robby"
 		]
 	},
-	"bs-hidetitle-desc": "Setzt dat magescht Wuert <code><nowiki>__HIDETITLE__</nowiki></code> dobäi fir den Titel vun der Säit ze verstoppen"
+	"bs-hidetitle-desc": "Setzt dat magescht Wuert <code><nowiki>__HIDETITLE__</nowiki></code> dobäi fir den Titel vun der Säit ze verstoppen",
+	"bs-hidetitle-ve-dialog-meta-settings-showtitle": "Weisen",
+	"bs-hidetitle-ve-dialog-meta-settings-hidetitle": "Verstoppen"
 }
