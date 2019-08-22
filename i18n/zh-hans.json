@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Liuxinyu970226",
-			"Viztor"
+			"Viztor",
+			"神樂坂秀吉"
 		]
 	},
 	"bs-hidetitle-desc": "添加魔术字<code><nowiki>__HIDETITLE__</nowiki></code>以隐藏页面标题",
 	"bs-hidetitle-ve-dialog-meta-settings-showtitle": "显示",
-	"bs-hidetitle-ve-dialog-meta-settings-hidetitle": "隐藏"
+	"bs-hidetitle-ve-dialog-meta-settings-hidetitle": "隐藏",
+	"bs-hidetitle-ve-dialog-meta-settings-hidetitle-label": "标题可见性"
 }
