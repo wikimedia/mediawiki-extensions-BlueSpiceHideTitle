@@ -5,7 +5,7 @@
 #contentSub,
 .bs-page-before-header,
 .bs-page-header,
-.bs-page-separator,
+#content .bs-page-separator,
 .bs-firstHeading-container,
 .bs-page-after-header
 {
