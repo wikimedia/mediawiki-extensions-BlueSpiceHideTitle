@@ -4,5 +4,7 @@
 			"Chrumps"
 		]
 	},
-	"bs-hidetitle-desc": "Dodaje magiczne słowo <code><nowiki>__HIDETITLE__</nowiki></code>, aby ukryć tytuł strony"
+	"bs-hidetitle-desc": "Dodaje magiczne słowo <code><nowiki>__HIDETITLE__</nowiki></code>, aby ukryć tytuł strony",
+	"bs-hidetitle-ve-dialog-meta-settings-showtitle": "Pokaż",
+	"bs-hidetitle-ve-dialog-meta-settings-hidetitle": "Ukryj"
 }
