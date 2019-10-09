@@ -1,7 +1,7 @@
 {
 	"name": "BlueSpiceHideTitle",
 	"license-name": "GPL-3.0-only",
-	"version": "3.0.1",
+	"version": "3.1.0",
 	"url": "https://en.wiki.bluespice.com/wiki/Reference:HideTitle",
 	"author": [
 		"Markus Glaser",
@@ -10,9 +10,9 @@
 	"descriptionmsg": "bs-hidetitle-desc",
 	"type": "bluespice",
 	"requires": {
-		"MediaWiki": ">= 1.31.0",
+		"MediaWiki": "~1.31",
 		"extensions": {
-			"BlueSpiceFoundation": ">= 3.0.0"
+			"BlueSpiceFoundation": "~3.1"
 		}
 	},
 	"attributes": {
@@ -23,6 +23,11 @@
 					"extPath": "/BlueSpiceHideTitle"
 				}
 			}
+		},
+		"BlueSpiceVisualEditorConnector": {
+			"PluginModules": [
+				"ext.bluespice.hideTitle.visualEditorPlugin"
+			]
 		}
 	},
 	"AutoloadNamespaces": {
@@ -40,6 +45,19 @@
 		"ext.bluespice.hidetitle.styles": {
 			"styles": [
 				"bluespice.hideTitle.css"
+			]
+		},
+		"ext.bluespice.hideTitle.visualEditorPlugin": {
+			"scripts": [
+				"bs.hidetitle/ui/plugin/MWMetaDialog.js",
+				"bs.hidetitle/dm/BSHideTitleMetaItem.js",
+				"bluespice.hideTitle.visualEditorPlugin.js"
+			],
+			"messages": [
+				"bs-hidetitle-ve-dialog-meta-settings-showtitle",
+				"bs-hidetitle-ve-dialog-meta-settings-hidetitle",
+				"bs-hidetitle-ve-dialog-meta-settings-hidetitle-label",
+				"bs-hidetitle-ve-dialog-meta-settings-hidetitle-help"
 			]
 		}
 	},

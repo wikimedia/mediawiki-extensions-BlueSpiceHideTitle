@@ -6,12 +6,25 @@ use BlueSpice\Hook\BeforePageDisplay;
 
 class AddModules extends BeforePageDisplay {
 
-	protected function doProcess() {
-		$title = $this->out->getTitle();
-		$hideTitlePageProp = \BsArticleHelper::getInstance( $title )->getPageProp( 'bs_hidetitle' );
-		if ( $hideTitlePageProp === '' ) {
-			$this->out->addModuleStyles( 'ext.bluespice.hidetitle.styles' );
+	/**
+	 *
+	 * @return bool
+	 */
+	protected function skipProcessing() {
+		$hideTitlePageProp = $this->getServices()->getBSUtilityFactory()
+			->getPagePropHelper( $this->out->getTitle() )->getPageProp( 'bs_hidetitle' );
+		if ( $hideTitlePageProp === null ) {
+			return true;
 		}
+		return false;
+	}
+
+	/**
+	 *
+	 * @return bool
+	 */
+	protected function doProcess() {
+		$this->out->addModuleStyles( 'ext.bluespice.hidetitle.styles' );
 		return true;
 	}
 
