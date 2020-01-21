@@ -69,7 +69,7 @@
 		"BSInsertMagicAjaxGetData": "\\BlueSpice\\HideTitle\\Hook\\BSInsertMagicAjaxGetData\\CheckHideTitle::callback",
 		"BeforePageDisplay": "\\BlueSpice\\HideTitle\\Hook\\BeforePageDisplay\\AddModules::callback",
 		"GetDoubleUnderscoreIDs": "\\BlueSpice\\HideTitle\\Hook\\GetDoubleUnderscoreIDs\\AddHideTitle::callback",
-		"BSUsageTrackerRegisterCollectors": "\\BlueSpice\\HideTitle\\Extension::onBSUsageTrackerRegisterCollectors"
+		"BSUsageTrackerRegisterCollectors": "\\BlueSpice\\HideTitle\\Hook\\BSUsageTrackerRegisterCollectors\\AddHideTitleTag::callback"
 	},
 	"load_composer_autoloader": true,
 	"manifest_version": 2

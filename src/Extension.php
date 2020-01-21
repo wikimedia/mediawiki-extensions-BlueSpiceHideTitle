@@ -30,18 +30,4 @@
 namespace BlueSpice\HideTitle;
 
 class Extension extends \BlueSpice\Extension {
-
-	/**
-	 * Register tag with UsageTracker extension
-	 * @param array &$aCollectorsConfig
-	 * @return Always true to keep hook running
-	 */
-	public static function onBSUsageTrackerRegisterCollectors( &$aCollectorsConfig ) {
-		$aCollectorsConfig['bs:hidetitle'] = [
-			'class' => 'Property',
-			'config' => [
-				'identifier' => 'bs_hidetitle'
-			]
-		];
-	}
 }
