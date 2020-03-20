@@ -11,7 +11,7 @@ class AddModules extends BeforePageDisplay {
 	 * @return bool
 	 */
 	protected function skipProcessing() {
-		$hideTitlePageProp = $this->getServices()->getBSUtilityFactory()
+		$hideTitlePageProp = $this->getServices()->getService( 'BSUtilityFactory' )
 			->getPagePropHelper( $this->out->getTitle() )->getPageProp( 'bs_hidetitle' );
 		if ( $hideTitlePageProp === null ) {
 			return true;
