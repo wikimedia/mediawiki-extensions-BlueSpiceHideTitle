@@ -2,8 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Alirezaaa",
-			"Ebraminio"
+			"Ebraminio",
+			"FarsiNevis"
 		]
 	},
-	"bs-hidetitle-desc": "واژه جادویی <code><nowiki>__HIDETITLE__</nowiki></code> را برای پنهان کردن عنوان صفحه می‌افزاید"
+	"bs-hidetitle-desc": "واژه جادویی <code><nowiki>__HIDETITLE__</nowiki></code> را برای پنهان کردن عنوان صفحه می‌افزاید",
+	"bs-hidetitle-ve-dialog-meta-settings-showtitle": "نشان بده",
+	"bs-hidetitle-ve-dialog-meta-settings-hidetitle": "پنهان کن"
 }
