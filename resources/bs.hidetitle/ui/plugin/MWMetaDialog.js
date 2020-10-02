@@ -18,8 +18,8 @@ bs.hidetitle.ui.plugin.MWMetaDialog.prototype.initialize = function() {
 					data: 'mw:PageProp/bs_hidetitle',
 					label: mw.msg( 'bs-hidetitle-ve-dialog-meta-settings-hidetitle' )
 				} )
-
-			] ),
+			] )
+			.connect( this, { select: 'onHideTitleChange' } ),
 		{
 			$overlay: this.component.$overlay,
 			align: 'top',
@@ -51,6 +51,7 @@ bs.hidetitle.ui.plugin.MWMetaDialog.prototype.getSetupProcess = function( parent
 
 bs.hidetitle.ui.plugin.MWMetaDialog.prototype.getTeardownProcess = function( parentProcess, data ) {
 	var advancedSettingsPage, metaList, hideTitleOption, hideTitleData, newHideTitleItem;
+
 	advancedSettingsPage = this.component.advancedSettingsPage;
 	metaList = this.component.getFragment().getSurface().metaList;
 	advancedSettingsPage.metaList = metaList;
@@ -67,4 +68,13 @@ bs.hidetitle.ui.plugin.MWMetaDialog.prototype.getTeardownProcess = function( par
 	}
 
 	return parentProcess;
+};
+
+/**
+ * Handle option state change events.
+ */
+bs.vec.ui.plugin.MWMetaDialog.prototype.onHideTitleChange = function () {
+	this.component.actions.setAbilities( {
+		done: true
+	} );
 };
