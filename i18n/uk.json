@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ата",
+			"Movses",
 			"Vlad5250",
-			"Movses"
+			"Ата"
 		]
 	},
 	"bs-hidetitle-desc": "Додає магічне слово <code><nowiki>__HIDETITLE__</nowiki></code>, щоб приховати назву сторінки",
