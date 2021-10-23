@@ -8,7 +8,8 @@
 #content .bs-page-separator,
 .bs-firstHeading-container,
 .bs-page-after-header,
-#siteNotice
+#siteNotice,
+#title-section
 {
 	display: none;
 }
