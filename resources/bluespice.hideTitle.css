@@ -13,3 +13,8 @@
 {
 	display: none;
 }
+
+article#content .ve-init-target-visual > .ve-ui-toolbar > .oo-ui-toolbar-bar,
+article#content .ve-init-target-source > .ve-ui-toolbar > .oo-ui-toolbar-bar {
+	top: var(--navbar-primary-height);
+}
