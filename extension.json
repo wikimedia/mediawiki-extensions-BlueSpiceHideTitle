@@ -28,6 +28,13 @@
 			"PluginModules": [
 				"ext.bluespice.hideTitle.visualEditorPlugin"
 			]
+		},
+		"BlueSpiceHideTitle": {
+			"CssSelectorModules": {
+				"default": {
+					"class" : "\\BlueSpice\\HideTitle\\DefaultCssSelectorModule"
+				}
+			}
 		}
 	},
 	"AutoloadNamespaces": {
@@ -43,9 +50,7 @@
 	},
 	"ResourceModules": {
 		"ext.bluespice.hidetitle.styles": {
-			"styles": [
-				"bluespice.hideTitle.css"
-			]
+			"class": "\\BlueSpice\\HideTitle\\ResourceLoader\\AddResources"
 		},
 		"ext.bluespice.hideTitle.visualEditorPlugin": {
 			"scripts": [
@@ -69,7 +74,8 @@
 		"BSInsertMagicAjaxGetData": "\\BlueSpice\\HideTitle\\Hook\\BSInsertMagicAjaxGetData\\CheckHideTitle::callback",
 		"BeforePageDisplay": "\\BlueSpice\\HideTitle\\Hook\\BeforePageDisplay\\AddModules::callback",
 		"GetDoubleUnderscoreIDs": "\\BlueSpice\\HideTitle\\Hook\\GetDoubleUnderscoreIDs\\AddHideTitle::callback",
-		"BSUsageTrackerRegisterCollectors": "\\BlueSpice\\HideTitle\\Hook\\BSUsageTrackerRegisterCollectors\\AddHideTitleTag::callback"
+		"BSUsageTrackerRegisterCollectors": "\\BlueSpice\\HideTitle\\Hook\\BSUsageTrackerRegisterCollectors\\AddHideTitleTag::callback",
+		"OutputPageBodyAttributes": "\\BlueSpice\\HideTitle\\Hook\\OutputPageBodyAttributes\\HideTitleBodyClass::onOutputPageBodyAttributes"
 	},
 	"load_composer_autoloader": true,
 	"manifest_version": 2
