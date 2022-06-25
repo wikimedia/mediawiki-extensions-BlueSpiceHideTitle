@@ -10,7 +10,7 @@
 	"descriptionmsg": "bs-hidetitle-desc",
 	"type": "bluespice",
 	"requires": {
-		"MediaWiki": ">= 1.36.0",
+		"MediaWiki": ">= 1.38.0",
 		"extensions": {
 			"BlueSpiceFoundation": ">= 4.1"
 		}
@@ -32,7 +32,7 @@
 		"BlueSpiceHideTitle": {
 			"CssSelectorModules": {
 				"default": {
-					"class" : "\\BlueSpice\\HideTitle\\DefaultCssSelectorModule"
+					"class": "\\BlueSpice\\HideTitle\\DefaultCssSelectorModule"
 				}
 			}
 		}

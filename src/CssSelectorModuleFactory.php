@@ -4,7 +4,7 @@ namespace BlueSpice\HideTitle;
 
 use ExtensionRegistry;
 use MediaWiki\MediaWikiServices;
-use Wikimedia\ObjectFactory;
+use Wikimedia\ObjectFactory\ObjectFactory;
 
 class CssSelectorModuleFactory {
 
