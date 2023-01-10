@@ -29,5 +29,10 @@
 	},
 	"extra": {
 		"installer-name": "BlueSpiceHideTitle"
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true
+		}
 	}
 }
