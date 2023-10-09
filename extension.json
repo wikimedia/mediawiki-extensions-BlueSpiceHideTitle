@@ -71,7 +71,6 @@
 		"remoteExtPath": "BlueSpiceHideTitle/resources"
 	},
 	"Hooks": {
-		"BSInsertMagicAjaxGetData": "\\BlueSpice\\HideTitle\\Hook\\BSInsertMagicAjaxGetData\\CheckHideTitle::callback",
 		"BeforePageDisplay": "\\BlueSpice\\HideTitle\\Hook\\BeforePageDisplay\\AddModules::callback",
 		"GetDoubleUnderscoreIDs": "\\BlueSpice\\HideTitle\\Hook\\GetDoubleUnderscoreIDs\\AddHideTitle::callback",
 		"BSUsageTrackerRegisterCollectors": "\\BlueSpice\\HideTitle\\Hook\\BSUsageTrackerRegisterCollectors\\AddHideTitleTag::callback",
