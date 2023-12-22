@@ -3,17 +3,17 @@
 namespace BlueSpice\HideTitle\Hook\BeforePageDisplay;
 
 use BlueSpice\Hook\BeforePageDisplay;
+use MediaWiki\MediaWikiServices;
 
 class AddModules extends BeforePageDisplay {
 
 	/**
-	 *
 	 * @return bool
 	 */
 	protected function skipProcessing() {
-		$hideTitlePageProp = $this->getServices()->getService( 'BSUtilityFactory' )
-			->getPagePropHelper( $this->out->getTitle() )->getPageProp( 'bs_hidetitle' );
-		if ( $hideTitlePageProp === null ) {
+		$hideTitlePageProp = MediaWikiServices::getInstance()->getPageProps()
+			->getProperties( $this->out->getTitle(), 'bs_hidetitle' );
+		if ( !$hideTitlePageProp ) {
 			return true;
 		}
 		return false;
