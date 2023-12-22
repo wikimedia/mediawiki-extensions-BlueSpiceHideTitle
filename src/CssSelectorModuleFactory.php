@@ -4,6 +4,7 @@ namespace BlueSpice\HideTitle;
 
 use ExtensionRegistry;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\ResourceLoader\Context as ResourceLoaderContext;
 use Wikimedia\ObjectFactory\ObjectFactory;
 
 class CssSelectorModuleFactory {
