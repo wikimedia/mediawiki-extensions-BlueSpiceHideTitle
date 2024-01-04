@@ -16,13 +16,13 @@ class HideTitleBodyClass {
 	 */
 	public static function onOutputPageBodyAttributes( OutputPage $out, Skin $skin, &$bodyAttrs ) {
 		$services = MediaWikiServices::getInstance();
-
-		$hideTitlePageProp = $services->getPageProps()
-			->getProperties( $out->getTitle(), 'bs_hidetitle' );
+		$title = $out->getTitle();
+		$pageProps = $services->getPageProps()
+			->getProperties( $title, 'bs_hidetitle' );
 
 		// Add an additional class to html body to give user a chance
 		// to hide things in MediaWiki:Common.css
-		if ( !$hideTitlePageProp ) {
+		if ( isset( $pageProps[ $title->getArticleId() ] ) ) {
 			$bodyAttrs[ 'class' ] .= ' hide-title';
 		}
 	}

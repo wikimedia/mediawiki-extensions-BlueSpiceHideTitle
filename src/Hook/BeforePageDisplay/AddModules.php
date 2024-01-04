@@ -13,7 +13,8 @@ class AddModules extends BeforePageDisplay {
 	protected function skipProcessing() {
 		$hideTitlePageProp = MediaWikiServices::getInstance()->getPageProps()
 			->getProperties( $this->out->getTitle(), 'bs_hidetitle' );
-		if ( !$hideTitlePageProp ) {
+
+		if ( empty( $hideTitlePageProp ) ) {
 			return true;
 		}
 		return false;
