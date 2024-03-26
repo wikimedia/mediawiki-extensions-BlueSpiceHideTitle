@@ -3,8 +3,8 @@
 namespace BlueSpice\HideTitle\ResourceLoader;
 
 use BlueSpice\HideTitle\CssSelectorModuleFactory;
-use ResourceLoaderContext;
-use ResourceLoaderFileModule;
+use MediaWiki\ResourceLoader\Context as ResourceLoaderContext;
+use MediaWiki\ResourceLoader\FileModule as ResourceLoaderFileModule;
 
 class AddResources extends ResourceLoaderFileModule {
 

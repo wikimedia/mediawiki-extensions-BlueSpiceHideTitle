@@ -2,6 +2,8 @@
 
 namespace BlueSpice\HideTitle;
 
+use MediaWiki\ResourceLoader\Context as ResourceLoaderContext;
+
 interface ICssSelectorModule {
 
 	/**
