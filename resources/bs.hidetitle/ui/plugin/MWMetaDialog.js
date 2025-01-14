@@ -35,7 +35,7 @@ bs.hidetitle.ui.plugin.MWMetaDialog.prototype.getSetupProcess = function( parent
 	var advancedSettingsPage, metaList, hideTitleOption, hideTitleField, hideTitleData;
 
 	advancedSettingsPage = this.component.advancedSettingsPage;
-
+	this.component.advancedSettingsPage.setup( data.fragment, data );
 	metaList = data.fragment.getSurface().metaList;
 
 	hideTitleField = advancedSettingsPage.hideTitle.getField();
@@ -53,8 +53,6 @@ bs.hidetitle.ui.plugin.MWMetaDialog.prototype.getTeardownProcess = function( par
 	var advancedSettingsPage, metaList, hideTitleOption, hideTitleData, newHideTitleItem;
 
 	advancedSettingsPage = this.component.advancedSettingsPage;
-	metaList = this.component.getFragment().getSurface().metaList;
-	advancedSettingsPage.metaList = metaList;
 
 	hideTitleOption = advancedSettingsPage.getMetaItem( 'bsHideTitle' );
 	hideTitleData = advancedSettingsPage.hideTitle.getField().findSelectedItem();
@@ -64,7 +62,7 @@ bs.hidetitle.ui.plugin.MWMetaDialog.prototype.getTeardownProcess = function( par
 	}
 	if ( hideTitleData.data !== 'default' ) {
 		newHideTitleItem = { type: 'bsHideTitle' };
-		advancedSettingsPage.metaList.insertMeta( newHideTitleItem );
+		this.component.getFragment().insertMeta( newHideTitleItem );
 	}
 
 	return parentProcess;
