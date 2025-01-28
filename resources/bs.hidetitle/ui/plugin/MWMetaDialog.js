@@ -50,7 +50,7 @@ bs.hidetitle.ui.plugin.MWMetaDialog.prototype.getSetupProcess = function( parent
 };
 
 bs.hidetitle.ui.plugin.MWMetaDialog.prototype.getTeardownProcess = function( parentProcess, data ) {
-	var advancedSettingsPage, metaList, hideTitleOption, hideTitleData, newHideTitleItem;
+	var advancedSettingsPage, hideTitleOption, hideTitleData, newHideTitleItem;
 
 	advancedSettingsPage = this.component.advancedSettingsPage;
 
@@ -58,11 +58,11 @@ bs.hidetitle.ui.plugin.MWMetaDialog.prototype.getTeardownProcess = function( par
 	hideTitleData = advancedSettingsPage.hideTitle.getField().findSelectedItem();
 
 	if ( hideTitleOption ) {
-		hideTitleOption.remove();
+		advancedSettingsPage.fragment.removeMeta( hideTitleOption );
 	}
 	if ( hideTitleData.data !== 'default' ) {
 		newHideTitleItem = { type: 'bsHideTitle' };
-		this.component.getFragment().insertMeta( newHideTitleItem );
+		this.component.getFragment().insertMeta( newHideTitleItem, 0 );
 	}
 
 	return parentProcess;
