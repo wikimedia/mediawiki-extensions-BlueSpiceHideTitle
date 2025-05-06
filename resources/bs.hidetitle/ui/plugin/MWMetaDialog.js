@@ -1,12 +1,12 @@
 bs.util.registerNamespace( 'bs.hidetitle.ui.plugin' );
 
-bs.hidetitle.ui.plugin.MWMetaDialog = function BsHideTitleUiPluginMWMetaDialog( component ) {
+bs.hidetitle.ui.plugin.MWMetaDialog = function BsHideTitleUiPluginMWMetaDialog( component ) { // eslint-disable-line no-unused-vars
 	bs.hidetitle.ui.plugin.MWMetaDialog.super.apply( this, arguments );
 };
 
 OO.inheritClass( bs.hidetitle.ui.plugin.MWMetaDialog, bs.vec.ui.plugin.MWMetaDialog );
 
-bs.hidetitle.ui.plugin.MWMetaDialog.prototype.initialize = function() {
+bs.hidetitle.ui.plugin.MWMetaDialog.prototype.initialize = function () {
 	this.component.advancedSettingsPage.hideTitle = new OO.ui.FieldLayout(
 		new OO.ui.ButtonSelectWidget()
 			.addItems( [
@@ -31,17 +31,15 @@ bs.hidetitle.ui.plugin.MWMetaDialog.prototype.initialize = function() {
 	this.component.advancedSettingsPage.advancedSettingsFieldset.$element.append( this.component.advancedSettingsPage.hideTitle.$element );
 };
 
-bs.hidetitle.ui.plugin.MWMetaDialog.prototype.getSetupProcess = function( parentProcess, data ) {
-	var advancedSettingsPage, metaList, hideTitleOption, hideTitleField, hideTitleData;
-
-	advancedSettingsPage = this.component.advancedSettingsPage;
+bs.hidetitle.ui.plugin.MWMetaDialog.prototype.getSetupProcess = function ( parentProcess, data ) {
+	const advancedSettingsPage = this.component.advancedSettingsPage;
 	this.component.advancedSettingsPage.setup( data.fragment, data );
-	metaList = data.fragment.getSurface().metaList;
+	const metaList = data.fragment.getSurface().metaList;
 
-	hideTitleField = advancedSettingsPage.hideTitle.getField();
+	const hideTitleField = advancedSettingsPage.hideTitle.getField();
 	advancedSettingsPage.metaList = metaList;
-	hideTitleOption = advancedSettingsPage.getMetaItem( 'bsHideTitle' );
-	hideTitleData = hideTitleOption?'mw:PageProp/bs_hidetitle':'default';
+	const hideTitleOption = advancedSettingsPage.getMetaItem( 'bsHideTitle' );
+	const hideTitleData = hideTitleOption ? 'mw:PageProp/bs_hidetitle' : 'default';
 
 	hideTitleField
 		.selectItemByData( hideTitleData );
@@ -49,19 +47,17 @@ bs.hidetitle.ui.plugin.MWMetaDialog.prototype.getSetupProcess = function( parent
 	return parentProcess;
 };
 
-bs.hidetitle.ui.plugin.MWMetaDialog.prototype.getTeardownProcess = function( parentProcess, data ) {
-	var advancedSettingsPage, hideTitleOption, hideTitleData, newHideTitleItem;
+bs.hidetitle.ui.plugin.MWMetaDialog.prototype.getTeardownProcess = function ( parentProcess, data ) { // eslint-disable-line no-unused-vars
+	const advancedSettingsPage = this.component.advancedSettingsPage;
 
-	advancedSettingsPage = this.component.advancedSettingsPage;
-
-	hideTitleOption = advancedSettingsPage.getMetaItem( 'bsHideTitle' );
-	hideTitleData = advancedSettingsPage.hideTitle.getField().findSelectedItem();
+	const hideTitleOption = advancedSettingsPage.getMetaItem( 'bsHideTitle' );
+	const hideTitleData = advancedSettingsPage.hideTitle.getField().findSelectedItem();
 
 	if ( hideTitleOption ) {
 		advancedSettingsPage.fragment.removeMeta( hideTitleOption );
 	}
 	if ( hideTitleData.data !== 'default' ) {
-		newHideTitleItem = { type: 'bsHideTitle' };
+		const newHideTitleItem = { type: 'bsHideTitle' };
 		this.component.getFragment().insertMeta( newHideTitleItem, 0 );
 	}
 
