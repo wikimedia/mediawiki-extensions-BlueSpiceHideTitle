@@ -4,7 +4,7 @@ namespace BlueSpice\HideTitle\Hook\OutputPageBodyAttributes;
 
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
-use Skin;
+use MediaWiki\Skin\Skin;
 
 class HideTitleBodyClass {
 
